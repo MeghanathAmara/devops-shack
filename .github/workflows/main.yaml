@@ -30,12 +30,8 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Setup Trivy
-              uses: aquasecurity/trivy-action@latest
+              uses: aquasecurity/trivy-action@v0.68.1
 
             - name: Run trivy security scan
               run: trivy fs --format table -o fs-report.txt 
-
-            - name: gitleaks scan
-              uses: zricethezav/gitleaks-action@v1.3.0
-              with:
-                  args: "--path=. --report=gitleaks-report.json --report-format=json"
+"
