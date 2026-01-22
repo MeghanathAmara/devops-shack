@@ -33,5 +33,4 @@ jobs:
               uses: aquasecurity/trivy-action@v0.68.1
 
             - name: Run trivy security scan
-              run: trivy fs --format table -o fs-report.txt 
-"
+              run: trivy fs --format table -o fs-report.txt
