@@ -30,9 +30,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Setup Trivy
-              uses: aquasecurity/trivy-action@master
-              with:
-                  version: '0.34.0'
+              uses: aquasecurity/trivy-action@latest
 
             - name: Run trivy security scan
               run: trivy fs --format table -o fs-report.txt 
